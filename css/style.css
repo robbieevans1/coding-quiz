@@ -13,7 +13,7 @@
 }
 
 body { 
-    background-color: black;
+    background-color: var(--clr-dark);
 }
 
 h1 {
@@ -93,7 +93,56 @@ h2 {
     box-shadow: 0 0.4rem 1.4rem 0 rgba(255,255,0,0.5);
 }
 
+
+#play-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255,255,0,0.5);
+}
+
 .fa-graduation-cap {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+.fa-play {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+/* End page styles */
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+    color: #333;
+}
+
+#initials {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+.fa-home {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+.fa-repeat-alt {
     font-size: 2.5rem;
     margin-left: 1rem;
 }

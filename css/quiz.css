@@ -33,11 +33,11 @@ body {
 }
 
 .correct {
-    background: linear-gradient(green);
+    background: rgb(11, 223, 36);
 }
 
-.correct {
-    background: linear-gradient(red);
+.incorrect {
+    background: red;
 }
 
 /* Heads Up Display */
@@ -69,7 +69,7 @@ body {
 
 #progressBarFull {
     height: 100%;
-    background: 0.2rem solid rgb(11, 223, 36);
+    background: rgb(11, 223, 36);
     width: 0%;
 
 }
