@@ -9,6 +9,7 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
+let timer = 200
 
 let questions = [
     {
@@ -60,6 +61,7 @@ startQuiz = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
+    timer = 200
     getNewQuestion()
 }
 

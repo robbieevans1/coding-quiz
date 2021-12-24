@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/quiz.css">
 </head>
 <body>
    <div class="container">
@@ -22,12 +22,20 @@
                </div> 
                <div class="hud-item">
                    <p class="hud-prefix">
-                       Score
+                       Time Left
                    </p>
-                   <h1 class="hud-main-text" id="score">
-                       0
+                   <h1 class="hud-main-text" id="timer">
+                       100
                    </h1>
                </div>
+               <div class="hud-item">
+                <p class="hud-prefix">
+                    Score
+                </p>
+                <h1 class="hud-main-text" id="score">
+                    0
+                </h1>
+            </div>
            </div>
            <h1 id="question">What is the answer</h1>
            <div class="choice-container">
@@ -49,6 +57,6 @@
        </div>
    </div> 
 
-   <script src="./js/script.js"></script>
+   <script src="/js/script.js"></script>
 </body>
 </html>
