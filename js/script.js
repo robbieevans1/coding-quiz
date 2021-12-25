@@ -3,6 +3,8 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+const countdownEl = document.getElementById('countdown');
+
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -64,6 +66,23 @@ startQuiz = () => {
     getNewQuestion()
 }
 
+const startingMinutes = 2;
+let time = startingMinutes * 60;
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    countdownEl.innerHTML = `${minutes}: ${seconds}`;
+    time--;
+
+    setTimeout(() => {alert("You have run out of time!")}, 120000);
+}
+
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
@@ -112,9 +131,14 @@ choices.forEach(choice => {
     })
 })
 
+
+
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
 }
 
+
+
 startQuiz()
+
